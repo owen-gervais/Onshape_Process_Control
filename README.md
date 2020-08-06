@@ -19,3 +19,11 @@ Only populate **PENDING** documents
 
 In the Description of the version you will be able to see the parts that need to be manufactured.
 
+## GET Versions:
+Solely need the document ID that comes from the **GET** shared Documents to get the most recent version id from the result
+
+## GET Version:
+You can just put in the achieved version ID in order to get the version description and state.
+
+## Create Version: 
+Updated on Drag to the current state of production and upon entering the final state updated the version and description of the document to teel the user that the prints are ready to be picked up. 
