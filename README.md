@@ -1,29 +1,15 @@
-# Onshape_Process_Control
+# Onshape_Process_Control_FLASK
 An exploration in leveraging Onshape as a 3D viewer and File management platform to control and organize Job shop operations.
 
+## How this works 
+This code is the basis for communication with the OnshapeAPI in order to push new versions of a document to manage job shop processes. Onshape can upload any file type and view it using it's part studios. This demo allows the user to specify a course to work on and then get all documents that are shared with the user's account that are requesting parts to be made.
 
-## GET Shared Documents:
+## How to use this app
+When an engineer finishes their design and is ready to get their parts fabricated, they create a document with the following format as a name 
 
-### url 
-= /api/documents,
-### query_params 
-={'filter':2, 'q': "ENTER CLASS NAME HERE"}
+### COURSE GROUP PROJECT , i.e. ME134 GROUP1 PROJECT 1
 
-Returns all of the shared documents to the user's Onshape Account, you can then parse for the individual document IDs
+In order for the job shop to know that the parts are ready to be made, the users create a version of this document with the version name **QUEUED** and a description that states the quantities of each part to be manufactured. 
 
-## Document ID's and Names would be displayed on Front End
+Once the 
 
-Need to make sure to **GET** current version and check if it is **PENDING** for completion. 
-
-Only populate **PENDING** documents
-
-In the Description of the version you will be able to see the parts that need to be manufactured.
-
-## GET Versions:
-Solely need the document ID that comes from the **GET** shared Documents to get the most recent version id from the result
-
-## GET Version:
-You can just put in the achieved version ID in order to get the version description and state.
-
-## Create Version: 
-Updated on Drag to the current state of production and upon entering the final state updated the version and description of the document to teel the user that the prints are ready to be picked up. 
