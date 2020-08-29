@@ -11,18 +11,18 @@ def index():
 
 
 
-@app.route('/sharedDocs')
-def sharedDocs():
-    docs = p_c.sharedDocs
-    return '{}\' are all of the documents shared with the main account'.format(docs)
+#@app.route('/sharedDocs')
+#def sharedDocs():
+#    docs = p_c.sharedDocs
+#    return docs
 
 
 
 @app.route('/refreshDocs')
 def refreshDocs():
     p_c.getAllSharedDocs()
-    return 'updated the list of shared documents with the master account!'
-
+    docs = p_c.sharedDocs
+    return docs
 
 
 @app.route('/queue/<did>')
