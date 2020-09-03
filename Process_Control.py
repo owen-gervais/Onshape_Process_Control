@@ -198,7 +198,7 @@ class Process_Control:
             OUTPUT: NONE (calls the pushVersion() method with 'QUEUD' status)
 
         """
-        self.pushVersion('QUEUED', did)
+        self.pushVersion('queued', did)
 
 
 
@@ -211,7 +211,7 @@ class Process_Control:
             OUTPUT: NONE (calls the pushVersion() method with 'PROCESSING' status)
 
         """
-        self.pushVersion('PROCESSING', did)
+        self.pushVersion('processing', did)
 
 
     
@@ -224,6 +224,6 @@ class Process_Control:
             OUTPUT: NONE (calls the pushVersion() method with 'COMPLETED' status)
 
         """
-        self.pushVersion('COMPLETED', did)
+        self.pushVersion('completed', did)
 
 
