@@ -190,7 +190,7 @@ class Process_Control:
 
 
 
-    def pushQUEUED(self, did):
+    def pushPENDING(self, did):
         """ Pushes the 'QUEUED' version to the specified did 
 
             INPUT: did (document identifier to update)
@@ -198,7 +198,7 @@ class Process_Control:
             OUTPUT: NONE (calls the pushVersion() method with 'QUEUD' status)
 
         """
-        self.pushVersion('queued', did)
+        self.pushVersion('pending', did)
 
 
 
